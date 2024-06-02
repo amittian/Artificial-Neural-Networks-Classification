@@ -6,17 +6,13 @@ In deep learning, building, compiling, training, and evaluating a model are the 
 # 1. Build the Model
 
 Building a model involves defining its architecture. This includes specifying the layers and the types of layers, the number of neurons in each layer, and the activation functions. Here’s an example using Keras
-
+```
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
-
-### Define the model
-```
 model = Sequential()
 
 ```
-
 ### Add layers to the model
 ```
 model.add(Dense(units=64, activation='relu', input_shape=(input_dim,)))
