@@ -1,7 +1,42 @@
 # Artificial-Neural-Networks-Classification
-Artificial Neural Networks : Classification
+Building the model is a crucial step in the deep learning pipeline where you define the architecture of your neural network. This involves deciding the **number of layers**, the **number of neurons** in each layer, and the **activation functions**. Here’s a detailed explanation of these decisions, especially in the context of a text classification task.
 
-In deep learning, building, compiling, training, and evaluating a model are the core steps involved in creating and using a neural network. Here's a step-by-step overview of these processes, typically using a framework like TensorFlow with Keras
+##### Understanding the Components
+
+- **Layers:** Layers are the building blocks of a neural network. Different types of layers (e.g., Dense, Convolutional, Recurrent) serve different purposes.
+
+- **Neurons:** Neurons are the individual units within a layer that perform computations. The number of neurons affects the model's capacity to learn complex patterns.
+
+- **Activation Functions:** Activation functions introduce non-linearity into the model, enabling it to learn and represent complex patterns.
+
+**Types Layer :**
+
+- **Input Layer:** This layer represents the input data. For text classification, input data is typically text sequences.
+
+- **Embedding Layer:** This layer is often used in text classification tasks to convert words into dense vectors of fixed size.
+
+- **Hidden Layers:** These layers perform computations and learn from the data. They can be Dense (fully connected) layers or specialized layers like LSTM (for sequential data).
+
+- **Output Layer:** This layer produces the final predictions. For binary classification, this usually involves a single neuron with a sigmoid activation function.
+
+### Deciding on Number of Neurons, Layers, and Activation Functions
+
+**Number of Layers:**
+
+- **Shallow Networks:** Few layers. Suitable for simpler problems or smaller datasets.
+**Deep Networks:** More layers. Suitable for complex problems and larger datasets. However, more layers increase computational cost and risk of overfitting.
+
+- **Number of Neurons:** The number of neurons in each layer depends on the **problem complexity** and **data size**. Common practice is to start with a **larger number of neurons** and reduce it in **subsequent layers**.
+
+**Example:** If the first hidden layer has 128 neurons, the next could have **64**, and so on.
+
+**Activation Functions:**
+  
+- **ReLU (Rectified Linear Unit)**: Commonly used in hidden layers. It helps mitigate the **vanishing gradient problem** and allows the** model to learn complex patterns**.
+
+- **Sigmoid:** Used in the output layer for **binary classification** problems. It squashes the output to a range between 0 and 1.
+
+- **Softmax:** Used in the output layer for **multi-class classification problems**. It converts the **logits** to **probabilities** that sum to 100%.
 
 # 1. Build the Model
 
